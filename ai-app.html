@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission &amp; Basketball Riddle Generator</title>
+  <style>
+    /* Embedded CSS for the AI app. All styles live in this file. */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 2em;
+    }
+    h1 {
+      color: #002e5d;
+    }
+    #riddleBox {
+      border: 2px dashed #444;
+      padding: 1em;
+      margin: 1em auto;
+      width: 80%;
+      max-width: 600px;
+      background-color: #ffffff;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      white-space: pre-line;
+    }
+    button {
+      margin-top: 1em;
+      padding: 0.5em 1.5em;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #ffffff;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    a {
+      display: block;
+      margin-top: 2em;
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mission &amp; Basketball Riddle Generator</h1>
+  <p>Click the button to get a new riddle or fun fact!</p>
+  <div id="riddleBox">🤔 <em>Press "New Riddle" to start</em></div>
+  <button onclick="generateRiddle()">New Riddle</button>
+  <p><a href="scratch.html">← Back to Scratch Page</a></p>
+
+  <script>
+    // Embedded JavaScript for the riddle generator. No external files needed.
+    const riddles = [
+      "I served for two years in the Lone Star State; who am I?\nAnswer: A missionary serving in Texas.",
+      "What has a court but no judge?\nAnswer: A basketball game.",
+      "Why did the basketball player go to the bank?\nAnswer: Because he wanted to get his bounce checked.",
+      "We knock on doors come rain or shine, spreading a message we hold divine. Who are we?\nAnswer: Missionaries.",
+      "I blow a whistle yet never sing; I keep the game fair. Who am I?\nAnswer: A referee."
+    ];
+
+    function generateRiddle() {
+      const randIndex = Math.floor(Math.random() * riddles.length);
+      document.getElementById('riddleBox').innerText = riddles[randIndex];
+    }
+  </script>
+</body>
+</html>
